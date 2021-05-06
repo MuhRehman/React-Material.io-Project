@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles,Box } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import 'font-awesome/css/font-awesome.min.css';
 import TableBody from '@material-ui/core/TableBody';
@@ -16,7 +16,9 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 // import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-// import logo from './logo152.png';
+import laptop from './logo512.png';
+import logo from './logo.png';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -74,6 +76,15 @@ function App() {
   return (
  
     <Container maxWidth="">
+      <div
+
+  container
+  boxShadow={3}
+  spacing={3}
+  style={{ padding: 20 }}
+>
+        <img src={logo} alt="" />
+        </div>
          <h2>Customer Master</h2>
  
  
@@ -155,6 +166,26 @@ function App() {
     <TabPanel>
     <TableContainer maxWidth="sm" style={{paddingLeft:"2px"}} component={Paper}>
       <Table  aria-label="customized table">
+        <TableHead style={{backgroundColor:"white",color:"black"}}>
+          <TableRow>
+          <input type="checkbox" style={{marginLeft:"22px",marginTop:"18px"}} id="vehicle1" name="vehicle1" value="Bike"></input>
+          <select  style={{marginLeft:"22px",marginTop:"18px"}} name="cars" id="cars">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  
+  </select>
+            <StyledTableCell style={{color:"black"}}>Image</StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="left">Part #</StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="left">Description</StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="right"></StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="right">Mr. Name </StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="right">Price</StyledTableCell>
+            <StyledTableCell  style={{color:"black"}} align="right">Catolog</StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="right">Entered By</StyledTableCell>
+            <StyledTableCell style={{color:"black"}} align="right">Icon</StyledTableCell>
+          </TableRow>
+        </TableHead>
         <TableHead style={{backgroundColor:"#0275d8"}}>
           <TableRow>
           <input type="checkbox" style={{marginLeft:"22px",marginTop:"18px"}} id="vehicle1" name="vehicle1" value="Bike"></input>
@@ -164,15 +195,15 @@ function App() {
     <option value="3">3</option>
   
   </select>
-            <StyledTableCell>Image</StyledTableCell>
-            <StyledTableCell align="left">Part #</StyledTableCell>
-            <StyledTableCell align="left">Description</StyledTableCell>
+            <StyledTableCell>Name of group</StyledTableCell>
+            <StyledTableCell align="left"></StyledTableCell>
+            <StyledTableCell align="left"></StyledTableCell>
             <StyledTableCell align="right"></StyledTableCell>
-            <StyledTableCell align="right">Mr. Name </StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Catolog</StyledTableCell>
-            <StyledTableCell align="right">Entered By</StyledTableCell>
-            <StyledTableCell align="right">Icon</StyledTableCell>
+            <StyledTableCell align="right"> </StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="right">...</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
