@@ -1,6 +1,9 @@
 import React from 'react';
+
+import './App.css';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
+import 'font-awesome/css/font-awesome.min.css';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
@@ -13,8 +16,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 // import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-// import logo from '../public/logo192.png';
-// import logo from '/public/laptop.png';
+// import logo from './logo152.png';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -34,12 +36,32 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
+function createData(name,part, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
-  createData('Frozen yoghurt','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
+  createData('https://www.linkpicture.com/q/laptop_2.png','Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'ssssss', 6.0, 24, 4.0),
 
 ];
 
@@ -57,22 +79,75 @@ function App() {
  
   <Tabs>
     <TabList>
-      <Tab>Company</Tab>
-      <Tab >Contact</Tab>
-      <Tab>Company  Address Book</Tab>
-      <Tab>Company Favorite</Tab>
-      <Tab>Spacial Pricing</Tab>
-      <Tab> Pricing</Tab>
+      <Tab>Company</Tab>|
+      <Tab >Contact</Tab> |
+      <Tab>Company  Address Book</Tab> |
+      <Tab>Company Favorite</Tab> |
+      <Tab>Spacial Pricing</Tab> |
+      <Tab> Credit Card</Tab>
     </TabList>
     
-    <div style={{paddingLeft:"2px",display:"flex",
+    <div style={{paddingLeft:"2px",display:"flex", backgroundColor:"rgba(0, 0, 0, 0.04)", paddingLeft:"12px", paddingRight:"12px",
   flexDirection: "row",
   flexWrap: "wrap",
   justifyContent: "space-between",}} className="flex" >
-    <input className="" placeholder="Search Products"  style={{alignSelf: "flex-start", border:"none",  paddingBottom:"12px",paddingTop:"12px",marginTop:"12px",marginBottom:"12px"}}></input>
+    <input className="" placeholder="&#xF002; Search Products ... "  style={{alignSelf: "flex-start",focus:"none", border:"none",backgroundColor:"rgba(0, 0, 0, 0.0)",  paddingBottom:"12px",paddingTop:"12px",marginTop:"24px",marginBottom:"12px"}}></input>
     <div  style={{alignSelf: "flex-end",paddingBottom:"12px",paddingTop:"12px",marginTop:"12px",marginBottom:"12px"}}>
 
-  <button>Drop Down</button>
+    <label className="dropdown">
+
+<div className="dd-button2">
+  2- 200 of 2,000 
+</div>
+
+<input type="checkbox" className="dd-input" id="test"/>
+
+<ul className="dd-menu">
+  <li>Add Product</li>
+  <li>Add Product Group</li>
+
+ 
+</ul>
+
+</label>
+    <label className="dropdown">
+
+<div className="dd-button3">
+ Sort
+</div>
+
+<input type="checkbox" className="dd-input" id="test"/>
+
+
+
+</label>
+    <label className="dropdown">
+
+<div className="dd-button3">
+ Filter 
+</div>
+
+<input type="checkbox" className="dd-input" id="test"/>
+
+
+
+</label>
+    <label className="dropdown">
+
+<div className="dd-button">
+  Add
+</div>
+
+<input type="checkbox" className="dd-input" id="test"/>
+
+<ul className="dd-menu">
+  <li>Add Product</li>
+  <li>Add Product Group</li>
+
+ 
+</ul>
+
+</label>
 
     </div>
 
@@ -90,6 +165,7 @@ function App() {
   
   </select>
             <StyledTableCell>Image</StyledTableCell>
+            <StyledTableCell align="left">Part #</StyledTableCell>
             <StyledTableCell align="left">Description</StyledTableCell>
             <StyledTableCell align="right"></StyledTableCell>
             <StyledTableCell align="right">Mr. Name </StyledTableCell>
@@ -110,8 +186,9 @@ function App() {
   
   </select>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                <img style={{height:"32px"}} src={row.name}  alt=""/>
               </StyledTableCell>
+              <StyledTableCell align="left">{row.calories}</StyledTableCell>
               <StyledTableCell align="left">{row.calories}</StyledTableCell>
               <StyledTableCell align="right"></StyledTableCell>
               <StyledTableCell align="right">{row.fat}</StyledTableCell>
@@ -119,6 +196,7 @@ function App() {
               <StyledTableCell align="right">{row.protein}</StyledTableCell>
               <StyledTableCell align="right">{row.protein}</StyledTableCell>
               <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              
             </StyledTableRow>
           ))}
         </TableBody>
