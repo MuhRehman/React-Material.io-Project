@@ -1,8 +1,12 @@
 import React from 'react';
 
 import './App.css';
+import Tabsc from './Tabsc.js';
 import { withStyles, makeStyles,Box } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
+import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import DragIndicatorIcon from '@material-ui/icons/DragIndicator';
 import 'font-awesome/css/font-awesome.min.css';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,7 +22,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import laptop from './logo512.png';
 import logo from './logo.png';
-
+import SearchIcon from '@material-ui/icons/Search';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -83,7 +87,7 @@ function App() {
   spacing={3}
   style={{ padding: 20 }}
 >
-        <img src={logo} alt="" />
+        <img src={logo} alt="" /> 
         </div>
          <h2>Customer Master</h2>
  
@@ -94,15 +98,16 @@ function App() {
       <Tab >Contact</Tab> |
       <Tab>Company  Address Book</Tab> |
       <Tab>Company Favorite</Tab> |
-      <Tab>Spacial Pricing</Tab> |
-      <Tab> Credit Card</Tab>
+      <Tab>Special Pricing</Tab> |
+      <Tab> Credit Cards</Tab>
     </TabList>
     
     <div style={{paddingLeft:"2px",display:"flex", backgroundColor:"rgba(0, 0, 0, 0.04)", paddingLeft:"12px", paddingRight:"12px",
   flexDirection: "row",
   flexWrap: "wrap",
   justifyContent: "space-between",}} className="flex" >
-    <input className="" placeholder="&#xF002; Search Products ... "  style={{alignSelf: "flex-start",focus:"none", border:"none",backgroundColor:"rgba(0, 0, 0, 0.0)",  paddingBottom:"12px",paddingTop:"12px",marginTop:"24px",marginBottom:"12px"}}></input>
+    
+    <input className="custominput" placeholder=" Search Products ... "  style={{alignSelf: "flex-start",focus:"none", border:"none",backgroundColor:"rgba(0, 0, 0, 0.0)",  paddingBottom:"12px",paddingTop:"12px",marginTop:"24px",marginBottom:"12px"}}></input>
     <div  style={{alignSelf: "flex-end",paddingBottom:"12px",paddingTop:"12px",marginTop:"12px",marginBottom:"12px"}}>
 
     <label className="dropdown">
@@ -123,7 +128,7 @@ function App() {
 </label>
     <label className="dropdown">
 
-<div className="dd-button3">
+<div className="dd-button5">
  Sort
 </div>
 
@@ -135,7 +140,7 @@ function App() {
     <label className="dropdown">
 
 <div className="dd-button3">
- Filter 
+Filter 
 </div>
 
 <input type="checkbox" className="dd-input" id="test"/>
@@ -164,17 +169,28 @@ function App() {
 
     </div>
     <TabPanel>
+  <Tabsc></Tabsc>
+    </TabPanel>
+    <TabPanel>
+    <p>
+       <h1>Contact</h1>
+    
+      </p>
+    </TabPanel>
+    <TabPanel>
+    <p>
+       <h1>Company  Address Book</h1>
+    
+      </p>
+    </TabPanel>
+    <TabPanel>
     <TableContainer maxWidth="sm" style={{paddingLeft:"2px"}} component={Paper}>
       <Table  aria-label="customized table">
         <TableHead style={{backgroundColor:"white",color:"black"}}>
           <TableRow>
-          <input type="checkbox" style={{marginLeft:"22px",marginTop:"18px"}} id="vehicle1" name="vehicle1" value="Bike"></input>
-          <select  style={{marginLeft:"22px",marginTop:"18px"}} name="cars" id="cars">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
+            <StyledTableCell style={{color:"black"}}> </StyledTableCell>
   
-  </select>
+            <StyledTableCell style={{color:"black"}}>Sort Order</StyledTableCell>
             <StyledTableCell style={{color:"black"}}>Image</StyledTableCell>
             <StyledTableCell style={{color:"black"}} align="left">Part #</StyledTableCell>
             <StyledTableCell style={{color:"black"}} align="left">Description</StyledTableCell>
@@ -188,6 +204,7 @@ function App() {
         </TableHead>
         <TableHead style={{backgroundColor:"#0275d8"}}>
           <TableRow>
+            <StyledTableCell> <DragIndicatorIcon/></StyledTableCell>
           <input type="checkbox" style={{marginLeft:"22px",marginTop:"18px"}} id="vehicle1" name="vehicle1" value="Bike"></input>
           <select  style={{marginLeft:"22px",marginTop:"18px"}} name="cars" id="cars">
     <option value="1">1</option>
@@ -203,12 +220,13 @@ function App() {
             <StyledTableCell align="right"></StyledTableCell>
             <StyledTableCell align="right"></StyledTableCell>
             <StyledTableCell align="right"></StyledTableCell>
-            <StyledTableCell align="right">...</StyledTableCell>
+            <StyledTableCell align="right"><MoreHorizIcon/></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <StyledTableRow key={row.name}>
+              <StyledTableCell align="left"> <DragIndicatorIcon/></StyledTableCell>
               <input type="checkbox"  style={{marginLeft:"22px",marginTop:"18px"}} id="vehicle1" name="vehicle1" value="Bike"></input>
               <select  style={{marginLeft:"22px",marginTop:"18px"}} name="cars" id="cars">
     <option value="1">1</option>
@@ -226,31 +244,36 @@ function App() {
               <StyledTableCell align="right">{row.carbs}</StyledTableCell>
               <StyledTableCell align="right">{row.protein}</StyledTableCell>
               <StyledTableCell align="right">{row.protein}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">  
+<label className="dropdown">
+
+<div className="dot-button">
+<MoreHorizIcon/>
+</div>
+
+<input type="checkbox" className="dd-input" id="test"/>
+
+<ul className="dot-menu">
+  <li>Edit </li>
+  <li>Move Up</li>
+  <li>Move Down </li>
+  <li>Change Group</li>
+  <li>Remove </li>
+
+ 
+</ul>
+
+</label>
+
+
+</StyledTableCell>
+              {/* <StyledTableCell align="right"><MoreHorizIcon/></StyledTableCell> */}
               
             </StyledTableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-    </TabPanel>
-    <TabPanel>
-    <p>
-       <h1>Contact</h1>
-    
-      </p>
-    </TabPanel>
-    <TabPanel>
-    <p>
-       <h1>Company  Address Book</h1>
-    
-      </p>
-    </TabPanel>
-    <TabPanel>
-    <p>
-       <h1>Company Favorite</h1>
-    
-      </p>
     </TabPanel>
     <TabPanel>
     <p>
