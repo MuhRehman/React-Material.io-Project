@@ -89,8 +89,8 @@ function App() {
 >
         <img src={logo} alt="" /> 
         </div>
-         <h2>Customer Master</h2>
- 
+         <h2    >Customer Master</h2>
+    <a href="#" onClick={console.log('The link was clicked.')}>Testing</a>
  
   <Tabs>
     <TabList>

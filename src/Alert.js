@@ -70,7 +70,7 @@ export default function MaxWidthDialog() {
         <Tabpanel/>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
+          <Button autoFocus onClick={handleClose} variant="outlined" color="primary">
             Cancel
           </Button>
           <Button autoFocus onClick={handleClose} style={{backgroundColor:"rgb(2, 117, 216)",color:"white"}} color="primary">
