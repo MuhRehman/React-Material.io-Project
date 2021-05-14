@@ -20,7 +20,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 function myFunction() {
-  alert("");
+  // alert("");
   console.log("Dd");
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
@@ -647,9 +647,10 @@ alignItems="center"
 >
 <Grid item xs={12} sm={6}>
 <div className="dd_with_select ">
+ 
 <label>Allow Payment Methods</label>
 <div className="custom-select">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search template..." />
+<input type="text" id="myInput" onKeyPress={myFunction}  placeholder="Search template..." />
 
 <ul id="myUL">
 
